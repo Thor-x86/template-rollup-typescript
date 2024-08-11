@@ -1,0 +1,38 @@
+name: CI
+on:
+  push:
+    branches: [dev]
+  pull_request:
+permissions:
+  contents: read # to fetch code (actions/checkout)
+
+jobs:
+  Tests:
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        include:
+          - node-version: 20
+            os: windows-latest
+          - node-version: 20
+            os: macOS-latest
+          - node-version: 18
+            os: ubuntu-latest
+          - node-version: 20
+            os: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: pnpm
+      - name: Install Node Modules
+        run: pnpm install
+      - name: Check source code formatting
+        run: pnpm run lint
+      - name: Build the source code
+        run: pnpm run build
+      - name: Test the build output
+        run: pnpm run test

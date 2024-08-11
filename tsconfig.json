@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "esnext",
+		"allowJs": true,
+		"checkJs": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"moduleResolution": "bundler",
+		"noEmit": true
+	},
+	"include": ["src/**/*", "test/**/*", "jest.config.js", "rollup.config.mjs"]
+}

@@ -1,0 +1,129 @@
+# -*- mode: gitignore; -*-
+# Template from: https://gist.github.com/jmsaavedra/20a1a845fe5f3a2b726a
+
+
+###################################
+# Project Specific
+###################################
+
+# Source Code
+/src/
+/tsconfig.json
+/rollup.config.mjs
+
+# Test Code
+/test/
+/jest.config.js
+
+# Browser-specific Build Output
+/out/
+
+# Hidden Files
+.*
+!.npm*
+
+
+###################################
+# general ignore patterns
+###################################
+
+*.log
+node_modules/
+obj/
+*.o
+Debug*/
+Release*/
+*.mode*
+*.app/
+*.pyc
+
+
+###################################
+# OS Specific
+###################################
+
+# Linux
+*~
+# KDE
+
+# MacOS
+**/.DS_Store
+*.swp
+*~.nib
+# Thumbnails
+
+# Windows
+# Windows image file caches
+Thumbs.db
+# Folder config file
+Desktop.ini
+# Side Effect of Copy to WSL
+*•Zone.Identifier
+
+# Android
+/libs/openFrameworksCompiled/project/android/paths.make
+
+
+###################################
+# IDE specific
+###################################
+
+# Vim
+Session.vim
+Sessionx.vim
+tags
+*.un~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+# Org-mode
+*_archive
+# flymake-mode
+*_flymake.*
+# eshell files
+/eshell/history
+/eshell/lastdir
+# reftex files
+*.rel
+# AUCTeX auto folder
+/auto/
+# cask packages
+# Flycheck
+flycheck_*.el
+# server auth directory
+/server/
+# projectiles files
+# directory configuration
+
+# network security
+/network-security.data
+
+# XCode
+*.pbxuser
+*.perspective
+*.perspectivev3
+*.mode1v3
+*.mode2v3
+
+# XCode 4
+xcuserdata
+*.xcworkspace
+
+# Code::Blocks
+*.depend
+*.layout
+
+# Visual Studio
+*.sdf
+*.opensdf
+*.suo
+ipch/
+
+# Eclipse
+local.properties
